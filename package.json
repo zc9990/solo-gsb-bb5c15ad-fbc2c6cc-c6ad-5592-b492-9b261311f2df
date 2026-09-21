@@ -1,0 +1,13 @@
+{
+  "name": "stage-timer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "会场发言计时联屏应用（控制台 + 投屏页，Node.js + React + WebSocket）",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "start": "npm run setup && npm run build && node server/index.js",
+    "dev:server": "node server/index.js",
+    "dev:client": "npm --prefix client run dev"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "stage-timer-server",
+  "private": true,
+  "version": "1.0.0",
+  "description": "会场发言计时联屏 - 服务端（唯一计时状态 + WebSocket 广播）",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
