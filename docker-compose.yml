@@ -1,0 +1,14 @@
+services:
+  venue-countdown:
+    build: .
+    image: venue-countdown:latest
+    container_name: venue-countdown
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      # 客户端未构建时服务端返回 502，构建后返回 200
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
